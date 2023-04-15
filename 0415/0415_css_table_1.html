@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>table 꾸미기</title>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            td, th {
+                text-align: left;
+                padding: 10px;
+                height: 20px;
+                width: 100px;
+            }
+            thead {
+                background: darkgray;
+                color: yellow;
+            }
+            td, tfoot th {
+                border-bottom: 1px soild gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>1학기 성적</h3>
+        <hr>
+        <table>
+            <thead>
+                <tr><th>이름</th><th>HTML</th><th>CSS</th></tr>
+            </thead>
+            <tfoot>
+                <tr><th>합</th><th>175</th><th>169</th></tr>
+            </tfoot>
+            <tbody>
+                <tr><td>김OO</td><td>80</td><td>70</td></tr>
+                <tr><td>이OO</td><td>95</td><td>99</td></tr>
+            </tbody>
+        </table>
+    </body>
+</html>
