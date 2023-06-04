@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Canvas 태그</title>
+    </head>
+    <body>
+        <canvas id="mCanvas" width="300" height="150" style="background-color: aliceblue;"></canvas>
+        <script>
+            let canvas = document.getElementById("mCanvas");
+            let context = canvas.getContext("2d");
+
+            context.beginPath();
+            context.strokeStyle = 'blue';
+            context.rect(30, 30, 50, 50);
+            context.stroke();
+
+            context.beginPath();
+            context.fillStyle = 'violet';
+            context.rect(60, 60, 50, 50);
+            context.fill();
+
+            context.font = "20px Gothic";
+            context.fillStyle = "green";
+            context.fillText("Text in Canvas", 100, 50);
+        </script>
+        <canvas id="mCanvas2" width="200" height="150" style="background-color: aliceblue;"></canvas>
+        <script>
+            let canvas2 = document.getElementById("mCanvas2");
+            let context2 = canvas2.getContext("2d");
+
+            context2.beginPath();
+            context2.moveTo(120, 20);
+            context2.lineTo(20, 50);
+            context2.lineTo(150, 120);
+            context2.lineTo(120, 20);
+            context2.strokeStyle = "magenta";
+            context2.stroke();
+        </script>
+        <canvas id="mCanvas3" width="200" height="150" style="background-color: aliceblue;"></canvas>
+        <script>
+            let canvas3 = document.getElementById("mCanvas3");
+            let context3 = canvas3.getContext("2d");
+
+            context3.beginPath();
+            context3.strokeStyle = "magenta";
+            context3.arc(100, 70, 30, 0, 1.5*Math.PI, false);
+            context3.stroke();
+
+            context3.beginPath();
+            context3.strokeStyle = "blue";
+            context3.arc(100, 70, 50, Math.PI/2, Math.PI, true);
+            context3.stroke();
+        </script>
+        <canvas id="mCanvas4" width="200" height="150" style="background-color: aliceblue;"></canvas>
+        <script>
+            let canvas4 = document.getElementById("mCanvas4");
+            let context4 = canvas4.getContext("2d");
+
+            context4.beginPath();
+            for (let i = 0; i < 5; i++) {
+                context4.rect(10+i*30, 10+i*10, 50, 50);
+            }
+            context4.strokeStyle = "magenta";
+            context4.stroke();
+        </script>
+    </body>
+</html>

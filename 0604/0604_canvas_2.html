@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Canvas 태그</title>
+    </head>
+    <body>
+        <canvas id="mCanvas" width="180" height="300" style="background-color: aliceblue;"></canvas>
+        <script>
+            let canvas = document.getElementById("mCanvas");
+            let context = canvas.getContext("2d");
+
+            context.beginPath();
+            context.moveTo(20, 20);
+            context.moveTo(150, 50);
+            context.strokeStyle = 'blue';
+            context.stroke();
+
+            context.beginPath();
+            context.rect(20, 80, 120, 50);
+            context.lineWidth = 10;
+            context.strokeStyle = "yellowgreen";
+
+            context.beginPath();
+            context.arc(80, 220, 50, 0, 1.5*Math.PI, false);
+            context.lineWidth = 20;
+            context.strokeStyle = 'violet';
+            context.stroke();
+        </script>
+        <canvas id="mCanvas2" width="500" height="400" style="background-color: aliceblue;"></canvas>
+        <script>
+            let canvas2 = document.getElementById("mCanvas2");
+            let context2 = canvas2.getContext("2d");
+            context2.strokeStyle = "blue";
+            
+            for (let i = 0; i < 4; i++) {
+                context2.font = (10 + i * 10) + "px forte";
+                context2.strokeText("JavaScript", 10, 30 + i * 50);
+            }
+
+            context2.font = "italic 50px forte";
+            context2.strokeStyle = "magenta";
+            context2.lineWidth = 3;
+            context2.textAlign = "left";
+            context2.strokeText("JavaScript", 50, 250);
+
+            context2.fillStyle = "green";
+            context2.textAlign = "right";
+            context2.fillText("JavaScript", 490, 300);
+        </script>
+    </body>
+</html>
