@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS</title>
+        <script>
+            document.oncontextmenu = function () {
+                alert("오른쪽 클릭(컨텍스트 메뉴) 금지됨");
+                return false;
+            }
+            function calculate() {
+                const exp = document.getElementById("exp");
+                const result = document.getElementById("result");
+                result.value = eval(exp.value);
+            }
+        </script>
+    </head>
+    <body onload="alert('사이트 로드됨')">
+        <h3>계산기</h3>
+        <hr>
+        <form>
+            <label>수식 입력 <input id="exp" type="text" value=""></label><br>
+            <label>결과 <input id="result" type="text"></label>
+            <input type="button" onclick="calculate()" value="계산">
+        </form>
+    </body>
+</html>

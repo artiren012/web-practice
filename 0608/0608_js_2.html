@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS</title>
+        <style>
+            #div {
+                background-color: rgba(255, 255, 255, 0.5);
+                position: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div"></div>
+        <img src="https://pbs.twimg.com/media/Fx7CdMjXwAETzPy?format=jpg&name=4096x4096" onmousemove="where(event)">
+        <script>
+            let div = document.getElementById("div");
+            function where(e) {
+                let text = "버튼 : " + e.button + "<br>";
+                text += "(screenX, screenY) : " + e.screenX + ", " + e.screenY + "<br>";
+                text += "(clientX, clientY) : " + e.clientX + ", " + e.clientY + "<br>";
+                text += "(offsetX, offsetY) : " + e.offsetX + ", " + e.offsetY + "<br>";
+                text += "(x, y) : " + e.x + ", " + e.y + "\n";
+                div.innerHTML = text;
+            }
+        </script>
+    </body>
+</html>
